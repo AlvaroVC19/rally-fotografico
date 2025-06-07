@@ -16,7 +16,7 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 
 $id_usuario = (int)$_GET['id'];
 
-// Obtener datos del usuario desde DB
+// Obtener datos del usuario desde la BD
 $stmt = $conn->prepare("SELECT id, nombre, email, rol FROM usuarios WHERE id = ?");
 $stmt->bind_param("i", $id_usuario);
 $stmt->execute();

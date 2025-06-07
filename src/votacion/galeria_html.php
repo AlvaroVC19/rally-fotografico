@@ -40,7 +40,7 @@ $resultado = $conn->query($sql);
         </div>
     <?php endif; ?>
 
-    <!-- Galería -->
+    <!-- Fotos -->
     <?php if ($resultado->num_rows > 0): ?>
         <div class="galeria-grid">
             <?php while ($foto = $resultado->fetch_assoc()): ?>

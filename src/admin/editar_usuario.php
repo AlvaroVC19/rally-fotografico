@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
-    // Actualizar en DB
+    // Actualizar en la BD
     $stmt = $conn->prepare("UPDATE usuarios SET nombre = ?, email = ?, rol = ? WHERE id = ?");
     $stmt->bind_param("sssi", $nombre, $email, $rol, $id);
 

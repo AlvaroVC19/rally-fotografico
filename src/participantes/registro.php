@@ -23,7 +23,7 @@ if (($esEdicion && ($password !== "" || $confirmar !== "")) || !$esEdicion) {
     }
 }
 
-// Verificar email ya usado por otro usuario (en edición se ignora el propio)
+// Verificar email ya usado por otro usuario (en editar se ignora el propio)
 if ($esEdicion) {
     $sql = "SELECT id FROM usuarios WHERE email = ? AND id != ?";
     $stmt = $conn->prepare($sql);

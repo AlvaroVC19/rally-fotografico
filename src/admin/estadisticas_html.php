@@ -1,7 +1,6 @@
 <?php
 require_once '../includes/db.php';
 include '../includes/header.php';
-// session_start(); /ya se ejecuta en header.php
 
 // Verifica si el usuario es administrador
 if (!isset($_SESSION["rol"]) || $_SESSION["rol"] !== "admin") {
@@ -62,14 +61,12 @@ $resultado = $stmt->get_result();
 <main class="estadisticas-main">
     <h2>📊 Estadísticas del Rally</h2>
 
-    <!-- Panel resumen -->
     <div class="estadisticas-panel">
         <div class="estadistica">👥 Participantes: <strong><?= $participantes ?></strong></div>
         <div class="estadistica">📷 Fotos admitidas: <strong><?= $fotos_admitidas ?></strong></div>
         <div class="estadistica">🗳️ Votos registrados: <strong><?= $votos ?></strong></div>
     </div>
 
-    <!-- Filtros -->
     <form method="GET" style="margin-bottom: 2rem; text-align: center;">
         <label for="usuario">Filtrar por usuario:</label>
         <select name="usuario" id="usuario" class="select-floral">
@@ -88,7 +85,6 @@ $resultado = $stmt->get_result();
         </select>
     </form>
 
-    <!-- Galería de 3 por fila -->
     <?php if ($resultado->num_rows > 0): ?>
         <div class="galeria-grid">
             <?php while ($foto = $resultado->fetch_assoc()): ?>
@@ -105,7 +101,7 @@ $resultado = $stmt->get_result();
     <?php endif; ?>
 </main>
 
-<!-- JS: autorefrescar al cambiar filtro -->
+<!-- Refrescar al cambiar filtro -->
 <script>
     document.querySelectorAll("form select").forEach(select => {
         select.addEventListener("change", () => {

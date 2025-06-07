@@ -1,8 +1,8 @@
 <?php
 // Datos de conexión
-$host = "localhost";       // O 127.0.0.1
-$usuario = "root";         // Nombre de usuario por defecto en XAMPP/WAMP
-$contrasena = "";          // Contraseña, normalmente vacía en local
+$host = "localhost";
+$usuario = "root";
+$contrasena = "";
 $base_datos = "rally_fotografico";
 
 // Crear conexión
@@ -13,6 +13,6 @@ if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
 }
 
-// Opcional: establecer codificación
+// Establecer codificación
 $conn->set_charset("utf8mb4");
-?>
+

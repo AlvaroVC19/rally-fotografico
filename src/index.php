@@ -8,7 +8,6 @@
 </head>
 <body>
 
-<!-- Hero principal -->
 <section class="hero-home" style="background-image: url('images/fondo.jpg');">
     <div class="hero-text">
         <h1>🌸 Enfoque Natural 🌸</h1>
@@ -20,7 +19,6 @@
     </div>
 </section>
 
-<!-- Información del rally -->
 <section class="info">
     <div class="info-box">
         <h2>📷 ¿Qué es Enfoque Natural?</h2>

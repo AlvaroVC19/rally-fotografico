@@ -31,10 +31,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             }
             exit;
         } else {
-            echo "⚠️ Contraseña incorrecta.";
+            echo "Contraseña incorrecta.";
         }
     } else {
-        echo "⚠️ Usuario no encontrado.";
+        echo "Usuario no encontrado.";
     }
 }
 ?>

@@ -10,6 +10,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <ul>
                 <?php if (isset($_SESSION["id"])): ?>
                     <li>
+                        <!-- Cambiar dirección según rol -->
                         <a href="<?php 
                             if (isset($_SESSION["rol"]) && $_SESSION["rol"] === "admin") {
                                 echo '/rally-fotografico/src/admin/admin_html.php';

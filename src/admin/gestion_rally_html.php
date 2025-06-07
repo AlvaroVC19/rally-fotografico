@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+// Verificar que sea admin
 if (!isset($_SESSION["rol"]) || $_SESSION["rol"] !== "admin") {
     header("Location: /rally-fotografico/src/index.php");
     exit();

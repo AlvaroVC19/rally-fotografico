@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+// Verificar que sea admin
 if (!isset($_SESSION["rol"]) || $_SESSION["rol"] !== "admin") {
     header("Location: /rally-fotografico/src/index.php");
     exit();
@@ -9,7 +11,6 @@ require_once '../includes/db.php';
 
 // Función para convertir formato datetime-local a MySQL DATETIME
 function formatearFechaMySQL($fecha_iso) {
-    // Convierte "2025-06-07T14:30" a "2025-06-07 14:30:00"
     return str_replace('T', ' ', $fecha_iso) . ":00";
 }
 

@@ -1,6 +1,4 @@
-/* ========================================
-   Aplica a todo el proyecto
-======================================== */
+/*  Aplica a todo el proyecto  */
 * {
     margin: 0;
     padding: 0;
@@ -30,10 +28,7 @@ button:hover {
 }
 
 
-/* ========================================
-   🧩 HEADER PRINCIPAL
-   Archivo: includes/header.php
-======================================== */
+/*  Aplica al header.php  */
 .main-header {
     background-color: #ffcce0;
     padding: 1rem;
@@ -69,9 +64,7 @@ button:hover {
 
 
 
-/* ========================================
-   Archivo: index.php
-======================================== */
+/*  Aplica al index.php  */
 .hero-home {
     background-size: cover;
     background-position: center;
@@ -161,10 +154,7 @@ button:hover {
 }
 
 
-/* ========================================
-   📝 FORMULARIOS
-   Archivos: registro_html.php, login_html.php, subir_foto_html.php
-======================================== */
+/*  Aplica a los formularios  */
 .form-container {
     max-width: 400px;
     margin: 3rem auto;
@@ -211,10 +201,7 @@ form input[type="submit"]:hover {
     background-color: #c2185b;
 }
 
-/* ========================================
-   🦶 FOOTER GENERAL
-   Archivo: todas las páginas
-======================================== */
+/*  Aplica al footer.php  */
 footer {
     text-align: center;
     padding: 1rem;
@@ -222,10 +209,7 @@ footer {
     color: white;
 }
 
-/* ========================================
-   💬 MENSAJES EMERGENTES
-   Archivos: galeria_html.php, validar_fotos_html.php
-======================================== */
+/*  Mensajes emergentes  */
 .mensaje {
     max-width: 600px;
     margin: 1rem auto;
@@ -252,10 +236,7 @@ footer {
     border: 1px solid #f5c6cb;
 }
 
-/* ========================================
-   🖼️ GALERÍA DE FOTOS
-   Archivos: galeria_html.php, estadisticas_html.php
-======================================== */
+/*  Afecta a las galerias de fotos  */
 .galeria-main,
 .estadisticas-main {
     max-width: 1200px;
@@ -291,10 +272,7 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-/* ========================================
-   📊 PANEL DE ESTADÍSTICAS
-   Archivo: estadisticas_html.php
-======================================== */
+/* Afecta a estadisticas_html.php  */
 .estadisticas-panel {
     display: flex;
     flex-wrap: wrap;
@@ -317,10 +295,7 @@ footer {
     color: #880e4f;
 }
 
-/* ========================================
-   🎛️ SELECTS ESTILIZADOS
-   Archivos: estadisticas_html.php, galeria_html.php
-======================================== */
+/*  Afecta a los selects  */
 .select-floral {
     padding: 0.5rem 1rem;
     border-radius: 6px;
@@ -337,9 +312,7 @@ footer {
     box-shadow: 0 0 5px rgba(233, 30, 99, 0.4);
 }
 
-/*Tabla*/
-
-/* Contenedor para la tabla con scroll horizontal si es necesario */
+/*  Afecta a la tabla del admin  */
 .table-wrapper {
     overflow-x: auto;
     margin-top: 2rem;
@@ -349,7 +322,6 @@ footer {
     box-shadow: 0 4px 15px rgba(217, 30, 86, 0.15);
 }
 
-/* Tabla */
 table {
     width: 100%;
     border-collapse: separate;
@@ -380,7 +352,6 @@ tbody td {
     transition: background-color 0.3s ease;
 }
 
-/* Hover en fila: cambio de fondo y sombra */
 tbody tr:hover td {
     background-color: #fce4ec;
     box-shadow: 0 6px 20px rgba(233, 30, 99, 0.15);
@@ -414,7 +385,7 @@ tbody tr:hover td {
     filter: brightness(0.9);
 }
 
-/* Responsive */
+/*  Animaciones tabla  */
 @media (max-width: 768px) {
     thead {
         display: none;
@@ -460,10 +431,7 @@ tbody tr:hover td {
 }
 
 
-/* ========================================
-   ✨ ANIMACIONES
-   Usadas en: hero, mensajes
-======================================== */
+/*  Animaciones en general  */
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }

@@ -11,7 +11,7 @@ $id_usuario = $_SESSION["id"];
 $titulo = trim($_POST["titulo"]);
 $descripcion = trim($_POST["descripcion"] ?? "");
 
-// 1. Obtener configuración
+// Obtener configuración
 $config = $conn->query("SELECT * FROM configuracion WHERE id = 1")->fetch_assoc();
 $limite_fotos = intval($config['max_fotos_por_participante']);
 $inicio_subida = $config['fecha_inicio_subida'];
@@ -19,13 +19,13 @@ $fin_subida = $config['fecha_fin_subida'];
 $ahora = date('Y-m-d H:i:s');
 
 
-// 2. Verificar fechas de subida
+// Verificar fechas de subida
 if ($ahora < $inicio_subida || $ahora > $fin_subida) {
     header("Location: subir_foto_html.php?error=fuera_fecha");
     exit;
 }
 
-// 3. Contar fotos del usuario
+// Contar fotos del usuario
 $stmt = $conn->prepare("SELECT COUNT(*) FROM fotografias WHERE id_usuario = ?");
 $stmt->bind_param("i", $id_usuario);
 $stmt->execute();
@@ -38,7 +38,7 @@ if ($total_subidas >= $limite_fotos) {
     exit;
 }
 
-// 4. Procesar imagen
+// Procesar imagen
 if (isset($_FILES["archivo"]) && $_FILES["archivo"]["error"] === 0) {
     $archivo_tmp = $_FILES["archivo"]["tmp_name"];
     $nombre_original = basename($_FILES["archivo"]["name"]);
