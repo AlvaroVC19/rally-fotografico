@@ -62,7 +62,7 @@ if (isset($_FILES["archivo"]) && $_FILES["archivo"]["error"] === 0) {
         $stmt->bind_param("isss", $id_usuario, $titulo, $descripcion, $nombre_archivo);
         $stmt->execute();
 
-        header("Location: mis_fotos_html.php?ok=1");
+        header("Location: perfil_html.php?ok=1");
         exit;
     } else {
         die("Error al guardar la imagen.");

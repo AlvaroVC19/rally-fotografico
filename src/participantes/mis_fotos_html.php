@@ -1,4 +1,6 @@
-<?php include '../includes/header.php';
+<?php
+session_start();
+include '../includes/header.php';
 require_once '../includes/db.php';
 
 //session_start();

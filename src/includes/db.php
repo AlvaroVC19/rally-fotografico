@@ -1,8 +1,8 @@
 <?php
 // Datos de conexión
-$host = "localhost";
+$host = "db";
 $usuario = "root";
-$contrasena = "";
+$contrasena = "root";
 $base_datos = "rally_fotografico";
 
 // Crear conexión

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../includes/header.php';
 require_once '../includes/db.php';
 
@@ -31,7 +32,7 @@ $fotos = $stmt->get_result();
 
     <div style="display: flex; justify-content: center; gap: 1rem; margin: 1rem 0;">
         <button onclick="location.href='subir_foto_html.php'" class="btn">Subir nueva foto</button>
-        <button onclick="location.href='/rally-fotografico/src/participantes/registro_html.php'" class="btn">Editar datos</button>
+        <button onclick="location.href='registro_html.php'" class="btn">Editar datos</button>
     </div>
 
     <?php if ($fotos->num_rows > 0): ?>
