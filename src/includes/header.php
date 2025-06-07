@@ -5,11 +5,21 @@ if (session_status() === PHP_SESSION_NONE) {
 ?>
 <header class="main-header">
     <div class="container">
-        <h1><a href="/rally-fotografico/src/index.php">🌸 Rally de Flores</a></h1>
+        <h1><a href="/rally-fotografico/src/index.php">🌸 Enfoque Natural</a></h1>
         <nav>
             <ul>
                 <?php if (isset($_SESSION["id"])): ?>
-                    <li><a href="/rally-fotografico/src/participantes/perfil_html.php">👤 <?= htmlspecialchars($_SESSION["nombre"]) ?></a></li>
+                    <li>
+                        <a href="<?php 
+                            if (isset($_SESSION["rol"]) && $_SESSION["rol"] === "admin") {
+                                echo '/rally-fotografico/src/admin/admin_html.php';
+                            } else {
+                                echo '/rally-fotografico/src/participantes/perfil_html.php';
+                            }
+                        ?>">
+                            👤 <?= htmlspecialchars($_SESSION["nombre"]) ?>
+                        </a>
+                    </li>
                     <li><a href="/rally-fotografico/src/participantes/logout.php">Cerrar sesión</a></li>
                 <?php else: ?>
                     <li><a href="/rally-fotografico/src/participantes/registro_html.php">Registrarse</a></li>

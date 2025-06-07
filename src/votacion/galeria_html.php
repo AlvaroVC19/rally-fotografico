@@ -68,5 +68,6 @@ $resultado = $conn->query($sql);
         <p>No hay fotos admitidas por el momento.</p>
     <?php endif; ?>
 </main>
+<?php include '../includes/footer.php'; ?>
 </body>
 </html>

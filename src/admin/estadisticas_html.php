@@ -1,9 +1,9 @@
 <?php
 require_once '../includes/db.php';
 include '../includes/header.php';
-// session_start(); // ya se ejecuta en header.php
+// session_start(); /ya se ejecuta en header.php
 
-// Solo admins
+// Verifica si el usuario es administrador
 if (!isset($_SESSION["rol"]) || $_SESSION["rol"] !== "admin") {
     die("Acceso denegado.");
 }

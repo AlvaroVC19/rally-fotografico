@@ -18,6 +18,7 @@ $inicio_subida = $config['fecha_inicio_subida'];
 $fin_subida = $config['fecha_fin_subida'];
 $ahora = date('Y-m-d H:i:s');
 
+
 // 2. Verificar fechas de subida
 if ($ahora < $inicio_subida || $ahora > $fin_subida) {
     header("Location: subir_foto_html.php?error=fuera_fecha");
@@ -69,3 +70,4 @@ if (isset($_FILES["archivo"]) && $_FILES["archivo"]["error"] === 0) {
 } else {
     die("No se ha enviado ningún archivo.");
 }
+

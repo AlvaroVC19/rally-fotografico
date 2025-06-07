@@ -1,4 +1,6 @@
-/* Reset básico */
+/* ========================================
+   Aplica a todo el proyecto
+======================================== */
 * {
     margin: 0;
     padding: 0;
@@ -11,9 +13,66 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Hero de inicio */
+button {
+    background-color: #e91e63;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #c2185b;
+}
+
+
+/* ========================================
+   🧩 HEADER PRINCIPAL
+   Archivo: includes/header.php
+======================================== */
+.main-header {
+    background-color: #ffcce0;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header h1 a {
+    text-decoration: none;
+    color: #d81b60;
+}
+
+.main-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.main-header nav a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+}
+
+.main-header nav a:hover {
+    color: #e91e63;
+}
+
+
+
+/* ========================================
+   Archivo: index.php
+======================================== */
 .hero-home {
-    background-image: url('../images/flores.jpg');
     background-size: cover;
     background-position: center;
     padding: 6rem 2rem;
@@ -22,7 +81,7 @@ body {
 }
 
 .hero-text {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     max-width: 700px;
     margin: auto;
     padding: 2rem;
@@ -71,19 +130,18 @@ body {
     color: #e91e63;
 }
 
-/* Secciones informativas */
 .info {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
     padding: 4rem 2rem;
-    background-color: #fffafc;
+    background-color: #e1eeff;
 }
 
 .info-box {
     max-width: 400px;
-    background-color: #ffffff;
+    background-color: rgb(255, 242, 247);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0,0.08);
@@ -102,7 +160,11 @@ body {
     font-size: 1rem;
 }
 
-/* Formularios */
+
+/* ========================================
+   📝 FORMULARIOS
+   Archivos: registro_html.php, login_html.php, subir_foto_html.php
+======================================== */
 .form-container {
     max-width: 400px;
     margin: 3rem auto;
@@ -149,7 +211,10 @@ form input[type="submit"]:hover {
     background-color: #c2185b;
 }
 
-/* Footer */
+/* ========================================
+   🦶 FOOTER GENERAL
+   Archivo: todas las páginas
+======================================== */
 footer {
     text-align: center;
     padding: 1rem;
@@ -157,41 +222,10 @@ footer {
     color: white;
 }
 
-/* Header */
-.main-header {
-    background-color: #fff0f6;
-    padding: 1rem;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.main-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.main-header h1 a {
-    text-decoration: none;
-    color: #d81b60;
-}
-
-.main-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-.main-header nav a {
-    text-decoration: none;
-    color: #444;
-    font-weight: bold;
-}
-
-.main-header nav a:hover {
-    color: #e91e63;
-}
-
-/* Mensajes */
+/* ========================================
+   💬 MENSAJES EMERGENTES
+   Archivos: galeria_html.php, validar_fotos_html.php
+======================================== */
 .mensaje {
     max-width: 600px;
     margin: 1rem auto;
@@ -218,13 +252,10 @@ footer {
     border: 1px solid #f5c6cb;
 }
 
-@keyframes fadeOut {
-    0%   { opacity: 1; }
-    80%  { opacity: 1; }
-    100% { opacity: 0; display: none; }
-}
-
-/* Galería en grilla */
+/* ========================================
+   🖼️ GALERÍA DE FOTOS
+   Archivos: galeria_html.php, estadisticas_html.php
+======================================== */
 .galeria-main,
 .estadisticas-main {
     max-width: 1200px;
@@ -260,7 +291,10 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-/* Panel resumen */
+/* ========================================
+   📊 PANEL DE ESTADÍSTICAS
+   Archivo: estadisticas_html.php
+======================================== */
 .estadisticas-panel {
     display: flex;
     flex-wrap: wrap;
@@ -283,7 +317,10 @@ footer {
     color: #880e4f;
 }
 
-/* Selects con estilo */
+/* ========================================
+   🎛️ SELECTS ESTILIZADOS
+   Archivos: estadisticas_html.php, galeria_html.php
+======================================== */
 .select-floral {
     padding: 0.5rem 1rem;
     border-radius: 6px;
@@ -300,8 +337,140 @@ footer {
     box-shadow: 0 0 5px rgba(233, 30, 99, 0.4);
 }
 
-/* Animación hero */
+/*Tabla*/
+
+/* Contenedor para la tabla con scroll horizontal si es necesario */
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 2rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(217, 30, 86, 0.15);
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: separate;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Cabecera */
+thead th {
+    background: #e91e63;
+    color: white;
+    font-weight: 700;
+    padding: 12px 20px;
+    text-align: left;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,0.15);
+}
+
+/* Celdas */
+tbody td {
+    background: #fff;
+    padding: 14px 20px;
+    border: none;
+    vertical-align: middle;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease;
+}
+
+/* Hover en fila: cambio de fondo y sombra */
+tbody tr:hover td {
+    background-color: #fce4ec;
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.15);
+}
+
+/* Botones de acción */
+.action-btn {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-right: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.action-btn.edit {
+    background-color: #d81b60;
+}
+
+.action-btn.delete {
+    background-color: #b0003a;
+}
+
+.action-btn:hover {
+    filter: brightness(0.9);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    thead {
+        display: none;
+    }
+    table, tbody, tr, td {
+        display: block;
+        width: 100%;
+    }
+    tbody tr {
+        margin-bottom: 1rem;
+        box-shadow: 0 4px 12px rgba(233, 30, 99, 0.1);
+        background: white;
+        padding: 1rem;
+    }
+    tbody td {
+        padding: 0.5rem 1rem;
+        box-shadow: none;
+        position: relative;
+        padding-left: 40%;
+        text-align: left;
+    }
+    tbody td::before {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 700;
+        color: #d81b60;
+        white-space: nowrap;
+    }
+    tbody td:nth-of-type(1)::before { content: "Nombre"; }
+    tbody td:nth-of-type(2)::before { content: "Email"; }
+    tbody td:nth-of-type(3)::before { content: "Rol"; }
+    tbody td:nth-of-type(4)::before { content: "Fecha Registro"; }
+    tbody td:nth-of-type(5)::before { content: "Acciones"; }
+
+    .action-btn {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+/* ========================================
+   ✨ ANIMACIONES
+   Usadas en: hero, mensajes
+======================================== */
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    0%   { opacity: 1; }
+    80%  { opacity: 1; }
+    100% { opacity: 0; display: none; }
 }

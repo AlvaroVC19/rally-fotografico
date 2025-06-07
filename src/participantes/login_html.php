@@ -21,7 +21,7 @@
             <input type="submit" value="Entrar">
         </form>
 
-        <p><a href="registro.html">¿No tienes cuenta? Regístrate aquí</a></p>
+        <p><a href="registro_html.php">¿No tienes cuenta? Regístrate aquí</a></p>
     </main>
 </body>
 </html>

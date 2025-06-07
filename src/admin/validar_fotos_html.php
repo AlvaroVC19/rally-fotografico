@@ -1,7 +1,6 @@
 <?php
 include '../includes/header.php';
 require_once '../includes/db.php';
-//session_start();
 
 // Verifica si el usuario es administrador
 if (!isset($_SESSION["rol"]) || $_SESSION["rol"] !== "admin") {
