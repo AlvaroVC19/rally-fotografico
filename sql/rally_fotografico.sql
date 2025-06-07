@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-06-2025 a las 20:48:21
+-- Tiempo de generación: 07-06-2025 a las 23:48:24
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -41,7 +41,7 @@ CREATE TABLE `configuracion` (
 --
 
 INSERT INTO `configuracion` (`id`, `max_fotos_por_participante`, `fecha_inicio_subida`, `fecha_fin_subida`, `fecha_inicio_votacion`, `fecha_fin_votacion`) VALUES
-(1, 3, '2025-05-25 18:42:48', '2025-06-01 18:42:48', '2025-06-02 18:42:48', '2025-06-09 18:42:48');
+(1, 3, '2025-06-07 10:00:00', '2025-06-11 08:34:00', '2025-06-09 08:35:00', '2025-06-14 18:00:00');
 
 -- --------------------------------------------------------
 
@@ -66,8 +66,9 @@ CREATE TABLE `fotografias` (
 INSERT INTO `fotografias` (`id`, `id_usuario`, `titulo`, `descripcion`, `archivo`, `estado`, `fecha_subida`) VALUES
 (1, 1, 'Amapolas', '', '6835fcdae6295.jpg', 'admitida', '2025-05-27 17:56:42'),
 (2, 1, 'Margaritas', '', '68372be11bff4.jpg', 'admitida', '2025-05-28 15:29:37'),
-(3, 1, 'Lilas', '', '68372c1e39cc1.jpg', 'admitida', '2025-05-28 15:30:38'),
-(4, 1, 'Tulipanes', '', '68372c46e7bab.jpg', 'rechazada', '2025-05-28 15:31:18');
+(4, 1, 'Tulipanes', '', '68372c46e7bab.jpg', 'rechazada', '2025-05-28 15:31:18'),
+(5, 3, 'Girasol', '', '68448c4e93d55.jpg', 'admitida', '2025-06-07 19:00:30'),
+(6, 3, 'Flor de cerezo', '', '68448d128b19e.jpg', 'admitida', '2025-06-07 19:03:46');
 
 -- --------------------------------------------------------
 
@@ -89,9 +90,9 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `email`, `password`, `rol`, `fecha_registro`) VALUES
-(1, 'Alvaro', 'villadiego@gmail.com', '$2y$10$LEje4tbbEcj.YeigxgEW3eDAMyN8DXdL2.pUwh5tE8oftT/04RWt2', 'participante', '2025-05-26 14:31:16'),
+(1, 'Alvaro', 'villadiego@gmail.com', '$2y$10$Kj1vOB7JOBaqcJR0DL.EyOZfx8wj/ezcBLyQA7eNCMDOEZ6LMkKnW', 'participante', '2025-05-26 14:31:16'),
 (2, 'admin', 'admin@gmail.com', '$2y$10$.LYq1vfMofq/VbZ0Nsvni.AA5iSHKKn597CGtONnZbZQg.OSgBhsG', 'admin', '2025-05-26 14:49:05'),
-(3, 'Maria', 'mariam@gmail.com', '$2y$10$UL6SrRNLVZ8Oz/a4aC92i.q.hWj2yreJx3CoobCAi8fp0zfygfuUO', 'participante', '2025-06-03 17:25:09');
+(3, 'Maria', 'mariam@gmail.com', '$2y$10$XM/CYLHsrBGeS26MnNYL8.3FVGB3uCgBHx6f.l2LYbyEubRLWGN6e', 'participante', '2025-06-03 17:25:09');
 
 -- --------------------------------------------------------
 
@@ -111,7 +112,8 @@ CREATE TABLE `votos` (
 --
 
 INSERT INTO `votos` (`id`, `id_foto`, `ip_usuario`, `fecha_voto`) VALUES
-(1, 1, '::1', '2025-05-27 17:59:17');
+(1, 1, '::1', '2025-05-27 17:59:17'),
+(2, 5, '::1', '2025-06-07 19:09:33');
 
 --
 -- Índices para tablas volcadas
@@ -152,7 +154,7 @@ ALTER TABLE `votos`
 -- AUTO_INCREMENT de la tabla `fotografias`
 --
 ALTER TABLE `fotografias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
@@ -164,7 +166,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `votos`
 --
 ALTER TABLE `votos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
