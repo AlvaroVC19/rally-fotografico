@@ -28,11 +28,13 @@ if ($esEdicion) {
     <meta charset="UTF-8">
     <title><?= $esEdicion ? "Editar Datos" : "Registro" ?> - Rally de Flores</title>
     <link rel="stylesheet" href="../css/style.css">
-    <?php include '../includes/header.php'; ?>
 </head>
 <body>
+<?php include '../includes/header.php'; ?>
+
 <main class="form-container">
     <h2><?= $esEdicion ? "Editar Datos de Usuario" : "Registro de Participante" ?></h2>
+    
     <form action="registro.php" method="POST">
         <label for="nombre">Nombre completo:</label>
         <input type="text" id="nombre" name="nombre" required value="<?= htmlspecialchars($nombre) ?>">
@@ -47,6 +49,11 @@ if ($esEdicion) {
         <input type="password" id="confirmar" name="confirmar" <?= $esEdicion ? "" : "required" ?> minlength="6">
 
         <input type="submit" value="<?= $esEdicion ? "Guardar cambios" : "Registrarse" ?>">
+
+        <!-- Botón Cancelar -->
+        <a href="<?= $esEdicion ? 'perfil_html.php' : '../index.php' ?>">
+            <button type="button" style="margin-top: 1rem;">Cancelar</button>
+        </a>
     </form>
 
     <?php if (!$esEdicion): ?>
