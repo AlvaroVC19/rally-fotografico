@@ -53,8 +53,8 @@ Esto levantará:
 
 3. 📂 Accede a la app:
 
-- Web: http://localhost:8080
-- phpMyAdmin: http://localhost:8081  
+- Web: http://172.31.192.1:8080/
+- phpMyAdmin: http://172.31.192.1:8081  
   Usuario: `root`  
   Contraseña: `root`
 
