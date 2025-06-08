@@ -22,7 +22,6 @@ Este proyecto está preparado para ejecutarse con **Docker Desktop** y `docker-c
 rally-fotografico/
 ├── docker/
 │   ├── php/                # Configuración del contenedor PHP-Apache
-│   └── mysql/              # Configuración y datos de la BD
 ├── sql/
 │   └── init.sql            # Script SQL para crear la BD y sus tablas
 ├── src/                    # Código fuente PHP
@@ -37,7 +36,7 @@ rally-fotografico/
 1. 📥 Clona el repositorio:
 
 ```bash
-git clone https://github.com/tu_usuario/rally-fotografico.git
+git clone https://github.com/AlvaroVC19/rally-fotografico.git
 cd rally-fotografico
 ```
 
@@ -69,7 +68,7 @@ La base de datos se guarda automáticamente en un volumen de Docker para que no 
 
 ## 🧪 Datos de prueba
 
-Puedes modificar `sql/init.sql` para incluir datos de ejemplo (usuarios, fotos, votos, etc.).
+Puedes modificar `sql/rally-fotografico.sql` para incluir datos de ejemplo (usuarios, fotos, votos, etc.).
 
 ---
 
