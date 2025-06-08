@@ -21,7 +21,7 @@ Este proyecto está preparado para ejecutarse con **Docker Desktop** y `docker-c
 ```
 rally-fotografico/
 ├── docker/
-│   ├── php/                # Configuración del contenedor PHP-Apache
+│   └── php/                # Configuración del contenedor PHP-Apache
 ├── sql/
 │   └── init.sql            # Script SQL para crear la BD y sus tablas
 ├── src/                    # Código fuente PHP
