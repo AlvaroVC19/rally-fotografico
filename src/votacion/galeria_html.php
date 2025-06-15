@@ -4,7 +4,7 @@ include '../includes/header.php';
 require_once '../includes/db.php';
 
 // Obtener todas las fotos admitidas, ordenadas por votos
-$sql = "SELECT f.id, f.titulo, f.archivo, u.nombre, f.id_usuario,
+$sql = "SELECT f.id, f.titulo, f.descripcion, f.archivo, u.nombre, f.id_usuario,
                (SELECT COUNT(*) FROM votos WHERE id_foto = f.id) AS votos
         FROM fotografias f
         JOIN usuarios u ON f.id_usuario = u.id
@@ -48,6 +48,16 @@ $resultado = $conn->query($sql);
                 <div class="foto-card">
                     <img src="../uploads/<?= htmlspecialchars($foto['archivo']) ?>" alt="Foto" class="foto-img">
                     <h3><?= htmlspecialchars($foto['titulo']) ?></h3>
+                    <?php
+                        $desc = trim($foto['descripcion'] ?? '');
+                        if ($desc === '') {
+                            // No hay descripción, mostramos mensaje en gris claro e itálica
+                            echo '<p><span style="color: #aaa; font-style: italic;">(Sin descripción)</span></p>';
+                        } else {
+                            // Hay descripción, la mostramos normal
+                            echo '<p>' . htmlspecialchars($desc) . '</p>';
+                        }
+                    ?>
                     <p>Autor: <?= htmlspecialchars($foto['nombre']) ?></p>
                     <p>Votos: <?= $foto['votos'] ?></p>
 

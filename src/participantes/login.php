@@ -30,10 +30,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             }
             exit;
         } else {
-            $error = "Contraseña incorrecta.";
+            $error = "Usuario/Contraseña incorrectos.";
         }
     } else {
-        $error = "Usuario no encontrado.";
+        $error = "Usuario/Contraseña incorrectos.";
     }
 }
 ?>
